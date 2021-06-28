@@ -21,7 +21,7 @@ public class Sale {
     private String SalesmanName;
     private String DOS;
 
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH}, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinColumn(name = "ProdID")
     private Product product;
     @Column(insertable = false, updatable = false)
